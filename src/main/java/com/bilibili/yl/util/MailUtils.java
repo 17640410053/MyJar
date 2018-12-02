@@ -39,6 +39,7 @@ public class MailUtils {
      * 生成随机验证码
      *
      * @param num 生成随机验证码的位数
+     * @return 随机num位数的验证码
      */
     public static String createRandomNum(int num) {
         StringBuffer randomNumStr = new StringBuffer();

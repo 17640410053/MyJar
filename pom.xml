@@ -7,7 +7,7 @@
     <!--729C3ACCD5460C51-->
     <groupId>com.github.17640410053</groupId>
     <artifactId>bilibili-jz-core</artifactId>
-    <version>1.0.1.RELEASE</version>
+    <version>1.0.0.RELEASE</version>
     <packaging>jar</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
     <!-- FIXME change it to the project's website -->
@@ -63,6 +63,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!--J2EE-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
         <!--添加spring/springMVC依赖包-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -87,6 +94,11 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-oxm</artifactId>
+            <version>5.1.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
             <version>5.1.2.RELEASE</version>
         </dependency>
         <dependency>

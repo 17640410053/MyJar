@@ -10,6 +10,7 @@ public class SortUtils {
      * 直接插入排序
      *
      * @param integers 需要排序的数组
+     * @return 返回排序好的数组
      */
     public Integer[] insertSort(Integer[] integers) {
         int len = integers.length;//单独把数组长度拿出来，提高效率
@@ -30,6 +31,7 @@ public class SortUtils {
      * 希尔排序
      *
      * @param integers 需要排序的数组
+     * @return 返回排序好的数组
      */
     public Integer[] sheelSort(Integer[] integers) {
         int len = integers.length;//单独把数组长度拿出来，提高效率
@@ -54,6 +56,7 @@ public class SortUtils {
      * 简单选择排序
      *
      * @param integers 需要排序的数组
+     * @return 返回排序好的数组
      */
     public Integer[] selectSort(Integer[] integers) {
         int len = integers.length;
@@ -76,6 +79,7 @@ public class SortUtils {
      * 堆排序
      *
      * @param integers 需要排序的数组
+     * @return 返回排序好的数组
      */
     public Integer[] heapSort(Integer[] integers) {
         int len = integers.length;
@@ -131,6 +135,7 @@ public class SortUtils {
      * 冒泡排序
      *
      * @param integers 需要排序的数组
+     * @return 返回排序好的数组
      */
     public Integer[] bubbleSort(Integer[] integers) {
         int len = integers.length;
@@ -150,6 +155,9 @@ public class SortUtils {
      * 快速排序
      *
      * @param integers 需要排序的数组
+     * @param start 从第几位开始
+     * @param end 到第几位结束
+     * @return 返回排序好的数组
      */
     public Integer[] quickSort(Integer[] integers, int start, int end) {
         if (start < end) {

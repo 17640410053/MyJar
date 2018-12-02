@@ -1,11 +1,14 @@
 package com.bilibili.yl.entity;
 
 /**
- * 通用返回集<p/>
+ * 通用返回集
  * <p>
- * code : 状态码<br/>
- * msg : 返回信息<br/>
- * count : 返回的记录数<br/>
+ * code : 状态码
+ * <p>
+ * msg : 返回信息
+ * <p>
+ * count : 返回的记录数
+ * <p>
  * data : [{},{}] 泛型T，返回的数据，如果没有返回null
  */
 public class ResultEntity<T> {

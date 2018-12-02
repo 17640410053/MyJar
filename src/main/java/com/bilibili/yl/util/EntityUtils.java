@@ -38,6 +38,9 @@ public class EntityUtils<T> {
      * 随机生成实体类（适用于数据库添加随机对象做测试用）
      *
      * @param clazz 你需要随机生成的对象反射
+     * @return T;
+     * @throws IllegalAccessException 参数异常
+     * @throws InstantiationException 实例化异常
      */
     public T RomEntity(Class<T> clazz) throws IllegalAccessException, InstantiationException {
         T t = clazz.newInstance();
@@ -72,6 +75,9 @@ public class EntityUtils<T> {
 
     /**
      * 如果是String类型执行以下操作
+     * @param field 文件流对象
+     * @param t 对象
+     * @throws IllegalAccessException 参数异常
      */
     private void isString(Field field, T t) throws IllegalAccessException {
         String fieldName = field.getName().toLowerCase();
@@ -100,6 +106,9 @@ public class EntityUtils<T> {
 
     /**
      * 如果是int以及包装类类型执行以下操作
+     * @param field 文件流对象
+     * @param t 对象
+     * @throws IllegalAccessException 参数异常
      */
     private void isInteger(Field field, T t) throws IllegalAccessException {
         String fieldName = field.getName().toLowerCase();
@@ -116,6 +125,9 @@ public class EntityUtils<T> {
 
     /**
      * 如果是日期执行以下操作
+     * @param field 文件流对象
+     * @param t 对象
+     * @throws IllegalAccessException 参数异常
      */
     private void isDate(Field field, T t) throws IllegalAccessException {
         String fieldName = field.getName().toLowerCase();
@@ -131,6 +143,8 @@ public class EntityUtils<T> {
 
     /**
      * 自动生成中文名
+     * @param length 生成长度
+     * @return 返回用文明
      */
     public String getRandomName(int length) {
         StringBuilder ret = new StringBuilder();
@@ -155,6 +169,8 @@ public class EntityUtils<T> {
 
     /**
      * 生成随机字符串，字母数字组成
+     * @param length 生成长度
+     * @return 随机字母数组字符串
      */
     public String getStringRandom(int length) {
         StringBuilder val = new StringBuilder();
@@ -177,6 +193,9 @@ public class EntityUtils<T> {
 
     /**
      * 获取随机数字
+     * @param start 开始
+     * @param end 结束
+     * @return 随机数字
      */
     public int getNum(int start, int end) {
         return (int) (Math.random() * (end - start + 1) + start);
@@ -184,6 +203,7 @@ public class EntityUtils<T> {
 
     /**
      * 随机生成手机号
+     * @return 随机手机号
      */
     private String getTel() {
         int index = getNum(0, phonePrefix.length - 1);
@@ -195,12 +215,18 @@ public class EntityUtils<T> {
 
     /**
      * 随机获取ip地址
+     * @return 随机IP
      * */
     public String getRandomIp() {
         int index = random.nextInt(10);
         return num2ip(range[index][0] + random.nextInt(range[index][1] - range[index][0]));
     }
 
+    /**
+     * 随机获取ip地址
+     * @param ip ip地址
+     * @return IP
+     * */
     public String num2ip(int ip) {
         int[] b = new int[4];
         b[0] = (ip >> 24) & 0xff;

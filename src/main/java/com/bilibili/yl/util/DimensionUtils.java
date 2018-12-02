@@ -24,6 +24,7 @@ public class DimensionUtils {
      * @param url    二维码内容，不局限于url也可以是其他，中文可能会乱码
      * @param width  二维码宽度
      * @param height 二维码高度
+     * @throws IOException IO流异常
      */
     public DimensionUtils(String url, Integer width, Integer height) throws IOException {
         this.url = url;
@@ -62,6 +63,7 @@ public class DimensionUtils {
      * 生成二维码并发送至客户端
      *
      * @param response 域对象
+     * @throws IOException IO流异常
      */
     public void sendDimension(HttpServletResponse response) throws IOException {
         if (url != null && !"".equals(url)) {

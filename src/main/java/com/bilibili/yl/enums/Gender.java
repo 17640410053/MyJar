@@ -1,11 +1,14 @@
 package com.bilibili.yl.enums;
 
 /**
- * 性别枚举类<p/>
- *
- * UNKNOWN为保密<br/>
- * MALE为保密<br/>
- * FEMALE为保密<br/>
+ * 性别枚举类
+ * <p>
+ * UNKNOWN为保密
+ * <p>
+ * MALE为保密
+ * <p>
+ * FEMALE为保密
+ * <p>
  * 用户录入验证  user.gender = Gender.genderOf(genderParameter).value
  */
 public enum Gender {
