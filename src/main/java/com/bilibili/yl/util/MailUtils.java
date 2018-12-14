@@ -58,4 +58,5 @@ public class MailUtils {
     public void send() {
         mailSender.send(mail);
     }
+
 }

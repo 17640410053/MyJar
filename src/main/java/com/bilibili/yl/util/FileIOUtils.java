@@ -2,20 +2,17 @@ package com.bilibili.yl.util;
 
 import org.apache.commons.io.FileUtils;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 
 public class FileIOUtils {
     /**
      * Base64位码图片上传
      *
-     * @param url      上传图片路径
      * @param fileName 上传图片名称，不需要后缀
      * @param base64   64位码
-     * @param request  request域
      * @return null为失败, 成功返回文件名
      */
-    private String base64UpLoad(String base64, String fileName, String url, HttpServletRequest request) {
+    public String base64UpLoad(String base64, String fileName, String url) {
         try {
             String dataPix;
             String data;
@@ -42,7 +39,7 @@ public class FileIOUtils {
             String tempFileName = fileName + suffix;  //生成文件名
             //因为BASE64Decoder的jar问题，此处使用spring框架提供的工具包
             byte[] bs = Base64Utils.decodeFromString(data);
-            FileUtils.writeByteArrayToFile(new File(request.getServletContext().getRealPath(url), tempFileName), bs);
+            FileUtils.writeByteArrayToFile(new File(url, tempFileName), bs);
             return tempFileName;
         } catch (Exception e) {
             return null;

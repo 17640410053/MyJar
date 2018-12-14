@@ -1,3 +1,4 @@
+import com.bilibili.yl.util.EntityUtils;
 import com.bilibili.yl.util.SortUtils;
 import org.junit.Test;
 
