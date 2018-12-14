@@ -9,13 +9,13 @@ package com.bilibili.yl.enums;
  * <p>
  * FEMALE为保密
  * <p>
- * 用户录入验证  user.gender = Gender.genderOf(genderParameter).value
+ * 用户录入验证  user.gender = GenderEnum.genderOf(genderParameter).value
  */
-public enum Gender {
+public enum GenderEnum {
     UNKNOWN(0), MALE(1), FEMALE(2);
     private final int value;
 
-    Gender(int value) {
+    GenderEnum(int value) {
         this.value = value;
     }
 
@@ -23,12 +23,12 @@ public enum Gender {
         return value;
     }
 
-    public static Gender genderOf(int aGenderValue) {
-        for (Gender gender : Gender.values()) {
+    public static GenderEnum genderOf(int aGenderValue) {
+        for (GenderEnum gender : GenderEnum.values()) {
             if (gender.value == aGenderValue) {
                 return gender;
             }
         }
-        return Gender.UNKNOWN;
+        return GenderEnum.UNKNOWN;
     }
 }

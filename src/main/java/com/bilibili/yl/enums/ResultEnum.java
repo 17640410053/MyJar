@@ -1,6 +1,6 @@
 package com.bilibili.yl.enums;
 
-public enum ResultCode {
+public enum ResultEnum {
     // 成功状态码
     SUCCESS("参数为空", 10001),
 
@@ -42,7 +42,7 @@ public enum ResultCode {
     private String msg;
     private int code;
 
-    ResultCode(String msg, int code) {
+    ResultEnum(String msg, int code) {
         this.msg = msg;
         this.code = code;
     }

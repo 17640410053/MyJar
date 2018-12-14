@@ -1,6 +1,6 @@
 package com.bilibili.yl.entity;
 
-import com.bilibili.yl.enums.ResultCode;
+import com.bilibili.yl.enums.ResultEnum;
 
 /**
  * 通用返回集
@@ -73,7 +73,7 @@ public class ResultEntity<T> {
         this.data = data;
     }
 
-    public void setCodeAndMsg(ResultCode code) {
+    public void setCodeAndMsg(ResultEnum code) {
         this.code = code.getCode();
         this.msg = code.getMsg();
     }

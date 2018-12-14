@@ -1,6 +1,5 @@
 import com.bilibili.yl.entity.ResultEntity;
-import com.bilibili.yl.enums.ResultCode;
-import com.bilibili.yl.util.EntityUtils;
+import com.bilibili.yl.enums.ResultEnum;
 import com.bilibili.yl.util.SortUtils;
 import org.junit.Test;
 
@@ -33,7 +32,7 @@ public class TestYui {
     @Test
     public void Enums() {
         ResultEntity<String> result = new ResultEntity<>();
-        result.setCodeAndMsg(ResultCode.SUCCESS);
+        result.setCodeAndMsg(ResultEnum.SUCCESS);
         System.out.println(result);
     }
 }
