@@ -8,6 +8,7 @@
 >* 2.优化文件上传方法被设置为私有的bug，目前可以正常使用;
 >* 3.讲异常信息设置为枚举类型ResultEnum，更加方便使用，易读;
 >>```java
+>>//异常信息枚举--举个栗子
 >>public class TestEnum{
 >>    public static void main(String[] args){
 >>      System.out.println(ResultEnum.SUCCESS); //获取枚举对象
@@ -18,6 +19,7 @@
 >>```
 >* 4.优化公共返回集ResultCode的方法，提供setCodeAndMsg方法与异常信息枚举联合，更加便捷;
 >>```java
+>>//ResultCode与ResultEnum结合使用--举个栗子
 >>public class TestResultByEnum{
 >>    public static void main(String[] args){
 >>      ResultEntity<String> result = new ResultEntity<>();
