@@ -8,6 +8,7 @@ public class FileIOUtils {
     /**
      * Base64位码图片上传
      *
+     * @param url      上传路径
      * @param fileName 上传图片名称，不需要后缀
      * @param base64   64位码
      * @return null为失败, 成功返回文件名

@@ -102,6 +102,8 @@ public class VerifyUtils {
 
     /**
      * 调用这个方法得到验证码
+     *
+     * @return BufferedImage类型图片文件
      */
     public BufferedImage getImage() {
         BufferedImage image = createImage(); //创建图片缓冲区
@@ -123,6 +125,8 @@ public class VerifyUtils {
 
     /**
      * 返回验证码图片上的文本
+     *
+     * @return 图片上的文本，用于验证
      */
     public String getText() {
         return text;
