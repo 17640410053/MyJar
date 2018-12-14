@@ -37,7 +37,7 @@ public class FileIOUtils {
                         if ("data:image/png;".equalsIgnoreCase(dataPix)) suffix = ".png";
                         else throw new Exception("上传图片格式不合法");
             String tempFileName = fileName + suffix;  //生成文件名
-            //因为BASE64Decoder的jar问题，此处使用spring框架提供的工具包
+            //因为BASE64Decoder的jar问题，此处使用本框架提供的工具包
             byte[] bs = Base64Utils.decodeFromString(data);
             FileUtils.writeByteArrayToFile(new File(url, tempFileName), bs);
             return tempFileName;
