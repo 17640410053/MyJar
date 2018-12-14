@@ -75,8 +75,9 @@ public class EntityUtils<T> {
 
     /**
      * 如果是String类型执行以下操作
+     *
      * @param field 文件流对象
-     * @param t 对象
+     * @param t     对象
      * @throws IllegalAccessException 参数异常
      */
     private void isString(Field field, T t) throws IllegalAccessException {
@@ -106,8 +107,9 @@ public class EntityUtils<T> {
 
     /**
      * 如果是int以及包装类类型执行以下操作
+     *
      * @param field 文件流对象
-     * @param t 对象
+     * @param t     对象
      * @throws IllegalAccessException 参数异常
      */
     private void isInteger(Field field, T t) throws IllegalAccessException {
@@ -125,8 +127,9 @@ public class EntityUtils<T> {
 
     /**
      * 如果是日期执行以下操作
+     *
      * @param field 文件流对象
-     * @param t 对象
+     * @param t     对象
      * @throws IllegalAccessException 参数异常
      */
     private void isDate(Field field, T t) throws IllegalAccessException {
@@ -143,6 +146,7 @@ public class EntityUtils<T> {
 
     /**
      * 自动生成中文名
+     *
      * @param length 生成长度
      * @return 返回用文明
      */
@@ -169,6 +173,7 @@ public class EntityUtils<T> {
 
     /**
      * 生成随机字符串，字母数字组成
+     *
      * @param length 生成长度
      * @return 随机字母数组字符串
      */
@@ -185,7 +190,7 @@ public class EntityUtils<T> {
                 int temp = random.nextInt(2) % 2 == 0 ? 65 : 97;
                 val.append((char) (random.nextInt(26) + temp));
             } else {
-                val.append(String.valueOf(random.nextInt(10)));
+                val.append(random.nextInt(10));
             }
         }
         return val.toString();
@@ -193,8 +198,9 @@ public class EntityUtils<T> {
 
     /**
      * 获取随机数字
+     *
      * @param start 开始
-     * @param end 结束
+     * @param end   结束
      * @return 随机数字
      */
     public int getNum(int start, int end) {
@@ -203,6 +209,7 @@ public class EntityUtils<T> {
 
     /**
      * 随机生成手机号
+     *
      * @return 随机手机号
      */
     private String getTel() {
@@ -215,8 +222,9 @@ public class EntityUtils<T> {
 
     /**
      * 随机获取ip地址
+     *
      * @return 随机IP
-     * */
+     */
     public String getRandomIp() {
         int index = random.nextInt(10);
         return num2ip(range[index][0] + random.nextInt(range[index][1] - range[index][0]));
@@ -224,15 +232,16 @@ public class EntityUtils<T> {
 
     /**
      * 随机获取ip地址
+     *
      * @param ip ip地址
      * @return IP
-     * */
+     */
     public String num2ip(int ip) {
         int[] b = new int[4];
         b[0] = (ip >> 24) & 0xff;
         b[1] = (ip >> 16) & 0xff;
         b[2] = (ip >> 8) & 0xff;
         b[3] = ip & 0xff;
-        return Integer.toString(b[0]) + "." + Integer.toString(b[1]) + "." + Integer.toString(b[2]) + "." + Integer.toString(b[3]);
+        return b[0] + "." + b[1] + "." + b[2] + "." + b[3];
     }
 }
