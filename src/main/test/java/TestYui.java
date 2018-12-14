@@ -1,3 +1,5 @@
+import com.bilibili.yl.entity.ResultEntity;
+import com.bilibili.yl.enums.ResultCode;
 import com.bilibili.yl.util.EntityUtils;
 import com.bilibili.yl.util.SortUtils;
 import org.junit.Test;
@@ -26,5 +28,12 @@ public class TestYui {
         String mac = getMac();
         System.out.println("os: " + os);
         System.out.println("mac: " + mac);
+    }
+
+    @Test
+    public void Enums() {
+        ResultEntity<String> result = new ResultEntity<>();
+        result.setCodeAndMsg(ResultCode.SUCCESS);
+        System.out.println(result);
     }
 }
