@@ -4,7 +4,25 @@
 
 >2018-12-14更新1.0.2版本兼容以前版本
 >-------------------
->* 1.提供验证码生成类，支持汉字，字母，数字，自定义形式;
+>* 1.提供验证码生成类，支持字母和数字，并且可以自定义形式;
+>>```java
+>>@Controller
+>>public class TestVerifyCode{
+>>    @RequestMapping("verify")
+>>    public void getVerify(){
+>>        VerifyUtils verify = new VerifyUtils();
+>>        verify.setSize(150,35); //设置图片的大小，默认150，30
+>>        verify.setCodes("123456789"); //设置生成的随机字段，默认所有数字和大小写字母
+>>        verify.getImage(); //调用这个方法获取验证码
+>>        String text = verify.getText(); //获取验证码上的文本信息
+>>        try {
+>>            vc.output(bi, response.getOutputStream());  //向浏览器输出图片
+>>        } catch (IOException e) {
+>>            e.printStackTrace();
+>>        }
+>>    }
+>>}
+>>```
 >* 2.优化文件上传方法被设置为私有的bug，目前可以正常使用;
 >* 3.讲异常信息设置为枚举类型ResultEnum，更加方便使用，易读;
 >>```java
