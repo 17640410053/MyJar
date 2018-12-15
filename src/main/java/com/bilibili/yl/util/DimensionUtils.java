@@ -17,8 +17,8 @@ import java.io.IOException;
  */
 public class DimensionUtils {
     private String url;
-    private Integer width;
-    private Integer height;
+    private Integer width = 600;
+    private Integer height = 600;
 
     /**
      * @param url    二维码内容，不局限于url也可以是其他，中文可能会乱码
@@ -32,7 +32,18 @@ public class DimensionUtils {
         this.height = height;
     }
 
-    public DimensionUtils() {
+    /**
+     * @param url 二维码内容，不局限于url也可以是其他，中文可能会乱码，宽高默认600
+     * @throws IOException IO流异常
+     */
+    public DimensionUtils(String url) throws IOException {
+        this.url = url;
+    }
+
+    /**
+     * @throws IOException IO流异常
+     */
+    public DimensionUtils() throws IOException {
     }
 
     public String getUrl() {

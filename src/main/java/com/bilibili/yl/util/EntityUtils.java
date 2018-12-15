@@ -212,7 +212,7 @@ public class EntityUtils<T> {
      *
      * @return 随机手机号
      */
-    private String getTel() {
+    public String getTel() {
         int index = getNum(0, phonePrefix.length - 1);
         String first = phonePrefix[index];
         String second = String.valueOf(getNum(1, 888) + 10000).substring(1);
